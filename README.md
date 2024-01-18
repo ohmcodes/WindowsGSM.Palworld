@@ -1,5 +1,5 @@
 # WindowsGSMPluginTemplate
-🧩WindowsGSM plugin that provides PluginTemplate Dedicated server
+🧩WindowsGSM plugin that provides Palworld Dedicated server
 
 
 # WindowsGSM Installation: 
@@ -8,24 +8,24 @@
 4. Drag WindowsGSM.Exe into previoulsy created folder and execute it.
 
 # Plugin Installation:
-1. Download [latest](https://github.com/ohmcodes/WindowsGSM.PluginTemplate/releases/latest) release
-2. Extract then Move **PluginTemplate.cs** folder to **plugins** folder
+1. Download [latest](https://github.com/ohmcodes/WindowsGSM.Palworld/releases/latest) release
+2. Extract then Move **Palworld.cs** folder to **plugins** folder
 3. OR Press on the Puzzle Icon in the left bottom side and install this plugin by navigating to it and select the Zip File.
 4. Click **[RELOAD PLUGINS]** button or restart WindowsGSM
-5. Navigate "Servers" and Click "Install Game Server" and find "PluginTemplate Dedicated Server [PluginTemplate.cs]
+5. Navigate "Servers" and Click "Install Game Server" and find "Palworld Dedicated Server [Palworld.cs]
 
 ### Official Documentation
-🗃️ https://TheGame.fandom.com/wiki/Dedicated_servers
+🗃️ https://Palworld.fandom.com/wiki/Dedicated_servers
 
 ### Unofficial Documentation
-🗃️ https://www.domain.com/blog/TheGame-dedicated-server/
+🗃️ https://www.Palworld.com/blog/Palworld-dedicated-server/
 
 ### The Game
-🕹️ https://store.steampowered.com/app/420/TheGame/
+🕹️ https://store.steampowered.com/app/1623730/Palworld/
 
 ### Dedicated server info
-🖥️ https://steamdb.info/app/420/info/
+🖥️ https://steamdb.info/app/1623730/info/
 
 
 # License
-This project is licensed under the MIT License - see the <a href="https://github.com/ohmcodes/WindowsGSM.PluginTemplate/blob/main/LICENSE">LICENSE.md</a> file for details
+This project is licensed under the MIT License - see the <a href="https://github.com/ohmcodes/WindowsGSM.Palworld/blob/main/LICENSE">LICENSE.md</a> file for details
