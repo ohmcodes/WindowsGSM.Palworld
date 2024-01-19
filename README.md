@@ -42,6 +42,7 @@ Copy all the contents of `\DefaultPalWorldSettings.ini` to `\Pal\Saved\Config\Wi
 ### Blank Console?
 Try Install Required Redis
 VC++ latest  DirectX offline version or latest
+download and install steam launcher on your server will do the fix
 
 # License
 This project is licensed under the MIT License - see the <a href="https://github.com/ohmcodes/WindowsGSM.Palworld/blob/main/LICENSE">LICENSE.md</a> file for details
