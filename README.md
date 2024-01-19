@@ -16,7 +16,7 @@
 5. Navigate "Servers" and Click "Install Game Server" and find "Palworld Dedicated Server [Palworld.cs]
 
 ### Official Documentation
-🗃️ https://Palworld.fandom.com/wiki/Dedicated_servers
+🗃️ [https://Palworld.fandom.com/wiki/Dedicated_servers](https://tech.palworldgame.com/dedicated-server-guide)
 
 ### Unofficial Documentation
 🗃️ https://www.Palworld.com/blog/Palworld-dedicated-server/
@@ -25,7 +25,7 @@
 🕹️ https://store.steampowered.com/app/1623730/Palworld/
 
 ### Dedicated server info
-🖥️ https://steamdb.info/app/1623730/info/
+🖥️ https://steamdb.info/app/2394010/info/
 
 
 # License
