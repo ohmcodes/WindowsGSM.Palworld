@@ -31,7 +31,7 @@ namespace WindowsGSM.Plugins
 
         // - Settings properties for SteamCMD installer
         public override bool loginAnonymous => false;
-        public override string AppId => "1623730"; /* taken via https://steamdb.info/app/1623730/info/ */
+        public override string AppId => "2394010"; /* taken via https://steamdb.info/app/1623730/info/ */
 
         // - Game server Fixed variables
         public override string StartPath => "executable.exe"; // Game server start path
