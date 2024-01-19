@@ -30,8 +30,8 @@ namespace WindowsGSM.Plugins
         public string Error, Notice;
 
         // - Settings properties for SteamCMD installer
-        public override bool loginAnonymous => false;
-        public override string AppId => "2394010"; /* taken via https://steamdb.info/app/1623730/info/ */
+        public override bool loginAnonymous => true;
+        public override string AppId => "2394010"; /* taken via https://steamdb.info/app/2394010/info/ */
 
         // - Game server Fixed variables
         public override string StartPath => "PalServer.exe"; // Game server start path
@@ -43,10 +43,10 @@ namespace WindowsGSM.Plugins
         // - Game server default values
         public string ServerName = "Palworld";
         public string Defaultmap = ""; // Original (MapName)
-        public string Maxplayers = "10"; // WGSM reads this as string but originally it is number or int (MaxPlayers)
-        public string Port = "27015"; // WGSM reads this as string but originally it is number or int
-        public string QueryPort = "27016"; // WGSM reads this as string but originally it is number or int (SteamQueryPort)
-        public string Additional = string.Empty;
+        public string Maxplayers = "32"; // WGSM reads this as string but originally it is number or int (MaxPlayers)
+        public string Port = "8211"; // WGSM reads this as string but originally it is number or int
+        public string QueryPort = "27015"; // WGSM reads this as string but originally it is number or int (SteamQueryPort)
+        public string Additional = "EpicApp=PalServer -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS";
 
 
         private Dictionary<string, string> configData = new Dictionary<string, string>();
@@ -68,7 +68,10 @@ namespace WindowsGSM.Plugins
                 return null;
             }
 
-            string param = string.Empty;
+            string param = $" {_serverData.ServerParam} ";
+            param += $"-publicport={_serverData.ServerPort} ";
+			param += $"-publicip=\"{_serverData.ServerIP}\" ";
+			param += $"-players={_serverData.ServerMaxPlayer} ";
 
             // Prepare Process
             var p = new Process
