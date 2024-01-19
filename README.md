@@ -43,6 +43,7 @@ Copy all the contents of `\DefaultPalWorldSettings.ini` to `\Pal\Saved\Config\Wi
 Try Install Required Redis
 VC++ latest  DirectX offline version or latest
 download and install steam launcher on your server will do the fix
+you should be seeing `Setting breakpad minidump AppID = 1623730`
 
 # License
 This project is licensed under the MIT License - see the <a href="https://github.com/ohmcodes/WindowsGSM.Palworld/blob/main/LICENSE">LICENSE.md</a> file for details
