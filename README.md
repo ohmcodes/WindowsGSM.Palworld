@@ -39,6 +39,9 @@ EpicApp=PalServer	Setup server as a community server. Do not change this paramet
 ### Config Guide
 Copy all the contents of `\DefaultPalWorldSettings.ini` to `\Pal\Saved\Config\WindowsServer\PalWorldSettings.ini`
 
+### Blank Console?
+Try Install Required Redis
+VC++ latest  DirectX offline version or latest
 
 # License
 This project is licensed under the MIT License - see the <a href="https://github.com/ohmcodes/WindowsGSM.Palworld/blob/main/LICENSE">LICENSE.md</a> file for details
