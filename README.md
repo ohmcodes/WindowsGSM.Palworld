@@ -1,6 +1,7 @@
 # WindowsGSMPluginTemplate
 🧩WindowsGSM plugin that provides Palworld Dedicated server
 
+# PLEASE STAR THE REPO IF YOU LIKE IT! THANKS!
 
 # WindowsGSM Installation: 
 1. Download  WindowsGSM https://windowsgsm.com/ 
