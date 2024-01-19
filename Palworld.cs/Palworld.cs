@@ -34,7 +34,7 @@ namespace WindowsGSM.Plugins
         public override string AppId => "2394010"; /* taken via https://steamdb.info/app/1623730/info/ */
 
         // - Game server Fixed variables
-        public override string StartPath => "executable.exe"; // Game server start path
+        public override string StartPath => "PalServer.exe"; // Game server start path
         public string FullName = "Palworld Dedicated Server"; // Game server FullName
         public bool AllowsEmbedConsole = true;  // Does this server support output redirect?
         public int PortIncrements = 0; // This tells WindowsGSM how many ports should skip after installation
