@@ -33,7 +33,7 @@ I believe that RCONPort can be change to anything so thats for another forwardin
 
 ### Available Params
 EpicApp=PalServer	Setup server as a community server. Do not change this parameter.
--publicip=X.X.X.X   Usualy the local port of the server
+-publicip=192.168.xxx.xxx   Usualy the local port of the server
 -publicport=8211    Fix port as of now
 
 ### Config Guide
