@@ -34,16 +34,17 @@ I believe that RCONPort can be change to anything so thats for another forwardin
 ### Available Params
 EpicApp=PalServer	Setup server as a community server. Do not change this parameter.
 -publicip=192.168.xxx.xxx   Usualy the local port of the server
--publicport=8211    Fix port as of now
+-publicport=8211    can be change
+Note: you have to port forward 27015 for palworld querying
 
 ### Config Guide
 Copy all the contents of `\DefaultPalWorldSettings.ini` to `\Pal\Saved\Config\WindowsServer\PalWorldSettings.ini`
 
 ### Blank Console?
-Try Install Required Redis
-VC++ latest  DirectX offline version or latest
-download and install steam launcher on your server will do the fix
-you should be seeing `Setting breakpad minidump AppID = 1623730`
+- Try Install Required Redist insde `_CommonRedist` folder
+- VC++ latest  DirectX offline version or latest
+- download and install steam launcher on your server will do the fix
+- you should be seeing `Setting breakpad minidump AppID = 1623730`
 
 # License
 This project is licensed under the MIT License - see the <a href="https://github.com/ohmcodes/WindowsGSM.Palworld/blob/main/LICENSE">LICENSE.md</a> file for details
