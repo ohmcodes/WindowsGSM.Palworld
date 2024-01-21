@@ -69,7 +69,7 @@ I've tried setting up PublicPort and PublicIP from here it looks like it gets ov
 
 # Other notes
 - Server listing - Please be aware that the whole world is listing their own dedicated server it is advisable to use direct connect instead looking for it. The game is not region lock and max 200 items
-- The game is currently in Early Access Stage WGSM and this plugin
+- The game is currently in Early Access Stage WGSM and this plugin is not taking liability if something happens to your server, the app is only for managing your server easily
 
 # License
 This project is licensed under the MIT License - see the <a href="https://github.com/ohmcodes/WindowsGSM.Palworld/blob/main/LICENSE">LICENSE.md</a> file for details
