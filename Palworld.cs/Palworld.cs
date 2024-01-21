@@ -19,7 +19,7 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.Palworld", // WindowsGSM.XXXX
             author = "ohmcodes",
             description = "WindowsGSM plugin for supporting Palworld Dedicated Server",
-            version = "1.0.1",
+            version = "1.1.1",
             url = "https://github.com/ohmcodes/WindowsGSM.Palworld", // Github repository link (Best practice)
             color = "#1E8449" // Color Hex
         };
