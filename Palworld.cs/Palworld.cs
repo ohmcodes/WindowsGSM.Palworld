@@ -75,7 +75,7 @@ namespace WindowsGSM.Plugins
             param += $"-queryport={_serverData.ServerQueryPort} ";
 			param += $"-publicqueryport={_serverData.ServerQueryPort} ";
             param += $"-players={_serverData.ServerMaxPlayer} ";
-            param += $"-servername={_serverData.ServerName} ";
+            param += $"-servername=\"\"\"{_serverData.ServerName}\"\"\"";
 
             // Prepare Process
             var p = new Process
