@@ -42,7 +42,7 @@ namespace WindowsGSM.Plugins
 
         // - Game server default values
         public string ServerName = "Palworld";
-        public string Defaultmap = ""; // Original (MapName)
+        public string Defaultmap = "MainWorld5"; // Original (MapName)
         public string Maxplayers = "32"; // WGSM reads this as string but originally it is number or int (MaxPlayers)
         public string Port = "8211"; // WGSM reads this as string but originally it is number or int
         public string QueryPort = "27015"; // WGSM reads this as string but originally it is number or int (SteamQueryPort)
