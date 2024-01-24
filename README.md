@@ -1,4 +1,4 @@
-# WindowsGSMPluginTemplate
+# WindowsGSM.Palworld
 🧩WindowsGSM plugin that provides Palworld Dedicated server
 
 # PLEASE ⭐STAR⭐ THE REPO IF YOU LIKE IT! THANKS!
