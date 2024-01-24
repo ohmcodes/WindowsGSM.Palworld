@@ -67,6 +67,14 @@ I've tried setting up PublicPort and PublicIP from here it looks like it gets ov
 - download and install steam launcher on your server will do the fix
 - you should be seeing `Setting breakpad minidump AppID = 1623730`
 
+### Stuck in loading?
+- Delete profile (For now now other fix)
+- To get the profile either open up a new server and let corrupted player to join and copy the save hex
+- Or backup all the players and start the server, let corrupted player to join and remember the hex and restore profiles then delete the corrupted profile save
+- if you have the player id you can conver it the hex https://www.binaryhexconverter.com/decimal-to-hex-converter
+- https://www.youtube.com/watch?v=fwLamiy30Qc&ab_channel=EpicLazyPanda 
+- It is advisable to put your pal in palbox and items in storages before logging out
+
 # Other notes
 - Server listing - Please be aware that the whole world is listing their own dedicated server it is advisable to use direct connect instead looking for it. The game is not region lock and max 200 items
 - The game is currently in Early Access Stage WGSM and this plugin is not taking liability if something happens to your server, the app is only for managing your server easily
