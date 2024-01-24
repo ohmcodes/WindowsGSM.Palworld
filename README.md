@@ -1,14 +1,14 @@
 # WindowsGSM.Palworld
 🧩WindowsGSM plugin that provides Palworld Dedicated server
 
-# PLEASE ⭐STAR⭐ THE REPO IF YOU LIKE IT! THANKS!
+## PLEASE ⭐STAR⭐ THE REPO IF YOU LIKE IT! THANKS!
 
-# WindowsGSM Installation: 
+### WindowsGSM Installation: 
 1. Download  WindowsGSM https://windowsgsm.com/ 
 2. Create a Folder at a Location you wan't all Server to be Installed and Run.
 4. Drag WindowsGSM.Exe into previoulsy created folder and execute it.
 
-# Plugin Installation:
+### Plugin Installation:
 1. Download [latest](https://github.com/ohmcodes/WindowsGSM.Palworld/releases/latest) release
 2. Extract then Move **Palworld.cs** folder to **plugins** folder
 3. OR Press on the Puzzle Icon in the left bottom side and install this plugin by navigating to it and select the Zip File.
