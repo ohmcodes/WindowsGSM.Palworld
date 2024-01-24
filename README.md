@@ -1,7 +1,7 @@
 # WindowsGSMPluginTemplate
 🧩WindowsGSM plugin that provides Palworld Dedicated server
 
-# PLEASE STAR THE REPO IF YOU LIKE IT! THANKS!
+# PLEASE ⭐STAR⭐ THE REPO IF YOU LIKE IT! THANKS!
 
 # WindowsGSM Installation: 
 1. Download  WindowsGSM https://windowsgsm.com/ 
@@ -78,6 +78,16 @@ I've tried setting up PublicPort and PublicIP from here it looks like it gets ov
 # Other notes
 - Server listing - Please be aware that the whole world is listing their own dedicated server it is advisable to use direct connect instead looking for it. The game is not region lock and max 200 items
 - The game is currently in Early Access Stage WGSM and this plugin is not taking liability if something happens to your server, the app is only for managing your server easily
+
+### Support
+[Palworld](https://discord.com/channels/505994577942151180/1196354410868117525)
+
+[WGSM](https://discord.com/channels/590590698907107340/645730252672335893)
+
+# Give Love!
+[Buy me a coffee](https://www.buymeacoffee.com/ohmcodes)
+
+[Paypal](https://www.paypal.com/donate/?business=8389QZ23QRDPE&no_recurring=0&item_name=Game+Server%2FTools+Community+Donations&currency_code=CAD)
 
 # License
 This project is licensed under the MIT License - see the <a href="https://github.com/ohmcodes/WindowsGSM.Palworld/blob/main/LICENSE">LICENSE.md</a> file for details
