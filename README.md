@@ -19,7 +19,7 @@
 🗃️ [https://Palworld.fandom.com/wiki/Dedicated_servers](https://tech.palworldgame.com/dedicated-server-guide)
 
 ### Unofficial Documentation
-🗃️ https://www.Palworld.com/blog/Palworld-dedicated-server/
+🗃️ https://www.survivalservers.com/wiki/index.php?title=How_to_Create_a_Palworld_Server_Guide
 
 ### The Game
 🕹️ https://store.steampowered.com/app/1623730/Palworld/
