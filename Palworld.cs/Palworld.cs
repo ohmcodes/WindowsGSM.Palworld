@@ -37,7 +37,7 @@ namespace WindowsGSM.Plugins
         public override string StartPath => @"Pal\Binaries\Win64\PalServer-Win64-Test-Cmd.exe"; // Game server start path 
         public string FullName = "Palworld Dedicated Server"; // Game server FullName
         public bool AllowsEmbedConsole = true;  // Does this server support output redirect?
-        public int PortIncrements = 0; // This tells WindowsGSM how many ports should skip after installation
+        public int PortIncrements = 1; // This tells WindowsGSM how many ports should skip after installation
         public object QueryMethod = new A2S(); // Query method should be use on current server type. Accepted value: null or new A2S() or new FIVEM() or new UT3()
 
         // - Game server default values
@@ -45,7 +45,7 @@ namespace WindowsGSM.Plugins
         public string Defaultmap = "MainWorld5"; // Original (MapName)
         public string Maxplayers = "32"; // WGSM reads this as string but originally it is number or int (MaxPlayers)
         public string Port = "8211"; // WGSM reads this as string but originally it is number or int
-        public string QueryPort = "27015"; // WGSM reads this as string but originally it is number or int (SteamQueryPort)
+        public string QueryPort = "8212"; // WGSM reads this as string but originally it is number or int (SteamQueryPort)
         public string Additional = "EpicApp=PalServer -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS";
 
 
