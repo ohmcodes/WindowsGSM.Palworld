@@ -6,7 +6,7 @@
 ### WindowsGSM Installation: 
 1. Download  WindowsGSM https://windowsgsm.com/ 
 2. Create a Folder at a Location you wan't all Server to be Installed and Run.
-4. Drag WindowsGSM.Exe into previoulsy created folder and execute it.
+4. Drag WindowsGSM.Exe into previously created folder and execute it.
 
 ### Plugin Installation:
 1. Download [latest](https://github.com/ohmcodes/WindowsGSM.Palworld/releases/latest) release
