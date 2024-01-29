@@ -29,7 +29,7 @@
 
 ### Port Forwarding
 - 8211 UDP - Default
-- TCP for 27015 - cant be change
+- 8212 TCP - if you are using 8211 it automatically using 8211 +1 = 8212 for QueryPort so you have to port forward this
 - RCONPort can be change to anything so thats for another forwarding TCP/UDP
 
 ### Available Params
@@ -38,7 +38,7 @@ All these params are automatically set by WGSM
 - -publicip=192.168.xxx.xxx     Usualy the local port of the server (Change via WGSM settings)
 - -publicport=8211              cant be change and its not really working (Change via WGSM settings)
 - -port=8211                    can be change and working (Change via WGSM settings)
-- -queryport=27015              this is a test not confirmed if its working or not
+- -queryport=8212               this is a test not confirmed if its working or not
 - -players=32                   can be set how much you want, as far as i know it can be 128 (Change via WGSM settings)
 - -servername=""                can override via Server Start Param box (WGSM Edit button)
 - -serverdescription=""         can override via Server Start Param box (WGSM Edit button)
@@ -56,10 +56,11 @@ I've tried setting up PublicPort and PublicIP from here it looks like it gets ov
 - RCONEnabled (if you are using thirdparty apps this is useful for saving the game outside for example discord slash commands /Save)
 - RCONPort (Can be set any port you preferred and must be forwarded as well)
 - Any other settings can be set (WARNING: Changing world settings server administrators reported that their saves is being wipe after changing values)
+- go to single player and custom a world check for custom config max value or else it will not work
 
 ### Connecting on a locked server (with password)
 - direct connect using ip:port
-- then go to Recent Servers click then input password
+- then go to Recent Servers click then input password (deprecated) they updated the game
 
 ### Blank Console?
 - Try Install Required Redist insde `_CommonRedist` folder
@@ -79,6 +80,16 @@ I've tried setting up PublicPort and PublicIP from here it looks like it gets ov
 - Server listing - Please be aware that the whole world is listing their own dedicated server it is advisable to use direct connect instead looking for it. The game is not region lock and max 200 items
 - The game is currently in Early Access Stage WGSM and this plugin is not taking liability if something happens to your server, the app is only for managing your server easily
 - To add GLST to help steam list your server https://steamcommunity.com/dev/managegameservers
+
+### How can you play with your friends without port forwarding?
+- Use [zerotier](https://www.zerotier.com/) folow the basic guide and create network
+- Download the client app and join to your network
+- Create static IP address for your host machine
+- Edit WGSM IP Address to your recently created static IP address
+- Give your network ID to your friends
+- After they've joined to your network
+- They can connect using the IP you've created eg: 10.123.17.1:8211
+- Enjoy
 
 ### Support
 [Palworld](https://discord.com/channels/505994577942151180/1196354410868117525)
