@@ -49,6 +49,7 @@ All these params are automatically set by WGSM
 
 ### Config Guide
 I've tried setting up PublicPort and PublicIP from here it looks like it gets overriden by launch parameters and its better than changing here
+- Run the server to generate Saved Folder files and Stop
 - Copy all the contents of `\DefaultPalWorldSettings.ini` to `\Pal\Saved\Config\WindowsServer\PalWorldSettings.ini`
 - Change ServerName
 - Change PublicIP= x.x.x.x (Local Server IP eg: 192.168.x.x)
