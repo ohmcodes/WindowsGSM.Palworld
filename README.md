@@ -34,7 +34,7 @@
 
 ### Available Params
 All these params are automatically set by WGSM
-- EpicApp=PalServer	            Setup server as a community server. Do not change this parameter.
+- -publiclobby   	            Setup server as a community server. Do not change this parameter.
 - -publicip=192.168.xxx.xxx     Usualy the local port of the server (Change via WGSM settings)
 - -publicport=8211              cant be change and its not really working (Change via WGSM settings)
 - -port=8211                    can be change and working (Change via WGSM settings)

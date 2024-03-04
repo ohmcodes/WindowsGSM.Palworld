@@ -19,7 +19,7 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.Palworld", // WindowsGSM.XXXX
             author = "ohmcodes",
             description = "WindowsGSM plugin for supporting Palworld Dedicated Server",
-            version = "1.1.2",
+            version = "1.1.3",
             url = "https://github.com/ohmcodes/WindowsGSM.Palworld", // Github repository link (Best practice)
             color = "#1E8449" // Color Hex
         };
@@ -46,7 +46,7 @@ namespace WindowsGSM.Plugins
         public string Maxplayers = "32"; // WGSM reads this as string but originally it is number or int (MaxPlayers)
         public string Port = "8211"; // WGSM reads this as string but originally it is number or int
         public string QueryPort = "8212"; // WGSM reads this as string but originally it is number or int (SteamQueryPort)
-        public string Additional = "EpicApp=PalServer -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS";
+        public string Additional = "-publiclobby -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS -rcon";
 
 
         private Dictionary<string, string> configData = new Dictionary<string, string>();
