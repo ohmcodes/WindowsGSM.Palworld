@@ -19,7 +19,7 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.Palworld", // WindowsGSM.XXXX
             author = "ohmcodes",
             description = "WindowsGSM plugin for supporting Palworld Dedicated Server",
-            version = "1.1.3",
+            version = "1.1.4",
             url = "https://github.com/ohmcodes/WindowsGSM.Palworld", // Github repository link (Best practice)
             color = "#1E8449" // Color Hex
         };
@@ -37,16 +37,16 @@ namespace WindowsGSM.Plugins
         public override string StartPath => @"Pal\Binaries\Win64\PalServer-Win64-Shipping-Cmd.exe"; // Game server start path 
         public string FullName = "Palworld Dedicated Server"; // Game server FullName
         public bool AllowsEmbedConsole = true;  // Does this server support output redirect?
-        public int PortIncrements = 1; // This tells WindowsGSM how many ports should skip after installation
-        public object QueryMethod = new A2S(); // Query method should be use on current server type. Accepted value: null or new A2S() or new FIVEM() or new UT3()
+        public int PortIncrements = 2; // Reserve game port + REST API port for additional instances
+        public object QueryMethod = null; // Palworld no longer exposes an A2S query on the REST API port
 
         // - Game server default values
         public string ServerName = "Palworld";
         public string Defaultmap = "MainWorld5"; // Original (MapName)
         public string Maxplayers = "32"; // WGSM reads this as string but originally it is number or int (MaxPlayers)
         public string Port = "8211"; // WGSM reads this as string but originally it is number or int
-        public string QueryPort = "8212"; // WGSM reads this as string but originally it is number or int (SteamQueryPort)
-        public string Additional = "-publiclobby -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS -rcon -logformat=text";
+        public string QueryPort = "8212"; // Reserved by WindowsGSM as Palworld REST API port (not A2S)
+        public string Additional = "-publiclobby -logformat=text";
 
 
         private Dictionary<string, string> configData = new Dictionary<string, string>();
@@ -69,11 +69,9 @@ namespace WindowsGSM.Plugins
             }
 
             string param = $" {_serverData.ServerParam} ";
-			param += $"-publicip=\"{_serverData.ServerIP}\" ";
+            param += $"-publicip=\"{_serverData.ServerIP}\" ";
             param += $"-port={_serverData.ServerPort} ";
             param += $"-publicport={_serverData.ServerPort} ";
-            param += $"-queryport={_serverData.ServerQueryPort} ";
-			param += $"-publicqueryport={_serverData.ServerQueryPort} ";
             param += $"-players={_serverData.ServerMaxPlayer} ";
             param += $"-servername=\"\"\"{_serverData.ServerName}\"\"\"";
 
@@ -85,7 +83,9 @@ namespace WindowsGSM.Plugins
                     WorkingDirectory = ServerPath.GetServersServerFiles(_serverData.ServerID),
                     FileName = shipExePath,
                     Arguments = param.ToString(),
-                    WindowStyle = ProcessWindowStyle.Hidden,
+                    // Keep a real console window so WindowsGSM can obtain and later toggle
+                    // the MainWindowHandle. WindowsGSM will hide it after startup.
+                    WindowStyle = ProcessWindowStyle.Minimized,
                     UseShellExecute = false
 
                 },
@@ -113,6 +113,31 @@ namespace WindowsGSM.Plugins
                     p.BeginOutputReadLine();
                     p.BeginErrorReadLine();
                 }
+                else
+                {
+                    // MainWindowHandle is cached by Process. Refresh while Palworld creates
+                    // its console window so WindowsGSM does not wait forever on a stale zero.
+                    for (int i = 0; i < 100 && !p.HasExited; i++)
+                    {
+                        p.Refresh();
+                        if (p.MainWindowHandle != IntPtr.Zero)
+                        {
+                            break;
+                        }
+
+                        await Task.Delay(100);
+                    }
+
+                    p.Refresh();
+
+                    // If the environment genuinely provides no usable window, tell
+                    // WindowsGSM to skip window handling instead of remaining in Starting.
+                    if (!p.HasExited && p.MainWindowHandle == IntPtr.Zero)
+                    {
+                        p.StartInfo.CreateNoWindow = true;
+                        Notice = "Palworld started without a usable console window. Toggle Console is unavailable for this session.";
+                    }
+                }
 
                 return p;
             }
@@ -126,12 +151,29 @@ namespace WindowsGSM.Plugins
         // - Stop server function
         public async Task Stop(Process p)
         {
-            await Task.Run(() =>
+            if (p == null || p.HasExited)
             {
-                Functions.ServerConsole.SetMainWindow(p.MainWindowHandle);
-                Functions.ServerConsole.SendWaitToMainWindow("^c");
-            });
-            await Task.Delay(2000);
+                return;
+            }
+
+            p.Refresh();
+            IntPtr hWnd = p.MainWindowHandle;
+
+            if (hWnd != IntPtr.Zero)
+            {
+                await Task.Run(() =>
+                {
+                    Functions.ServerConsole.SetMainWindow(hWnd);
+                    Functions.ServerConsole.SendWaitToMainWindow("^c");
+                });
+
+                await Task.Delay(2000);
+                return;
+            }
+
+            // Embedded/no-window sessions cannot receive the existing WindowsGSM Ctrl+C
+            // window message. Let WindowsGSM perform its normal timed fallback kill instead.
+            Notice = "No console window is available for graceful Ctrl+C shutdown; WindowsGSM fallback stop will be used.";
         }
 
         // - Update server function
@@ -139,7 +181,6 @@ namespace WindowsGSM.Plugins
         {
             var (p, error) = await Installer.SteamCMD.UpdateEx(serverData.ServerID, AppId, validate, custom: custom, loginAnonymous: loginAnonymous);
             Error = error;
-            await Task.Run(() => { p.WaitForExit(); });
             return p;
         }
 
@@ -150,7 +191,7 @@ namespace WindowsGSM.Plugins
 
         public bool IsImportValid(string path)
         {
-            string exePath = Path.Combine(path, "PackageInfo.bin");
+            string exePath = Path.Combine(path, StartPath);
             Error = $"Invalid Path! Fail to find {Path.GetFileName(exePath)}";
             return File.Exists(exePath);
         }
